@@ -1,0 +1,189 @@
+/* Styles */
+
+body {
+	padding: 0 5% 10px;
+	background: #f7f7f7;
+	text-rendering: optimizeLegibility;
+	max-width: 960px;
+	margin: 0 auto;
+}
+a {
+	color: #00aadc;
+}
+small a {
+	display: inline-block;
+	float: right;
+	font-size: 0.8em;
+	line-height: 40px;
+	text-decoration: none;
+	white-space: nowrap;
+	margin-bottom: -2px;
+	opacity: 0;
+	transition: opacity 0.1s ease-in-out;
+	-webkit-transition: opacity 0.1s ease-in-out;
+}
+section:hover small a {
+	opacity: 1;
+}
+#updated {
+	float: right;
+	line-height: 4em;
+	font-size: 0.8em;
+}
+body {
+	font-family: -apple-system, Roboto, "Segoe UI", "Helvetica Neue", Noto, sans-serif;
+}
+p {
+	color: #333;
+	font-size: 1.05em;
+	line-height: 1.5;
+}
+p code {
+	font-size: 0.9em;
+}
+table {
+	border: 1px solid #777;
+	border-width: 1px 1px 1px 0;
+	border-spacing: 0;
+	box-shadow: 1px 1px 0 #777;
+	margin: .7em 0 1em;
+	width: 100%;
+}
+h1,
+h2 {
+	font-weight: 300;
+	margin: 1em 0 0.2em;
+	line-height: 1.2;
+}
+h2 {
+	margin-top: 1.5em;
+}
+table td,
+table th {
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 6px 15px;
+	text-align: center;
+	width: 14%;
+}
+table th small {
+	font-weight: 400;
+}
+tr td:first-child,
+tr th:first-child {
+	border-left: 1px solid #555;
+}
+tr:first-child th {
+	text-align: center;
+}
+tr:last-child td,
+tr:last-child th {
+	border-bottom: none;
+}
+table th {
+	background-color: #f1f1f1;
+	color: #333;
+	border-left: 1px solid #ccc;
+	font-weight: 600;
+	padding: 6px 15px;
+	text-align: left;
+}
+table tr {
+	border: 0;
+}
+table td {
+	background: #fff;
+}
+small {
+	color: #777;
+}
+small code {
+	font-size: 0.8em;
+}
+tbody tr:first-child td,
+tbody tr:first-child th {
+	border-top: 1px solid #ccc;
+}
+tbody tr:first-child th {
+	text-align: left;
+}
+tbody tr:hover {
+	cursor: default;
+}
+thead th {
+	font-size: 0.75em;
+}
+h6 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.7em;
+	font-weight: 600;
+	margin-top: 2em;
+	color: #aaa;
+}
+footer h6 {
+	margin: 2em 0 4em;
+}
+footer cite {
+	font-style: normal;
+}
+h6 a {
+	text-decoration: none;
+}
+pre {
+	color: #777;
+	display: block;
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 10px 16px;
+	white-space: pre-wrap;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}
+code,
+code span {
+	font-family: Menlo, Consolas, "Roboto Mono", monospace;
+}
+pre .query {
+	color: #4ab866;
+}
+pre code,
+pre code span {
+	background: none;
+}
+table sup {
+	font-size: 14px;
+	top: -8px;
+	position: relative;
+}
+p.note {
+	font-size: 0.9em;
+}
+p.note code {
+	font-size: 0.85em;
+	background: rgba(0,0,0,0.05);
+	padding: 0 2px;
+}
+@media screen and (max-width: 600px) {
+	h1#top {
+		margin-top: 0;
+	}
+	#updated {
+		float: none;
+		line-height: 4em;
+		font-size: 13px;
+	}
+	pre code,
+	pre code span {
+		font-size: 12px;
+	}
+	th {
+		font-size: 0.9em;
+		padding: 3% !important;
+	}
+}
+@media screen and (max-width: 400px) {
+	body {
+		padding: 0 1.5% 10px;
+	}
+}

@@ -1,0 +1,159 @@
+<html>
+<head>
+	<title>Sensible HiDPI Media Queries</title>
+	<meta name="viewport" content="initial-scale=1.0,width=device-width">
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="updated">Updated <strong>July 30, 2015</strong></div>
+
+<h1 id="top">Sensible HiDPI Media&nbsp;Queries</h1>
+
+<p>These are the results of my media query test for determining how to serve high-resolution assets to every browser. I&rsquo;ve established a pixel ratio of 1.25x so that HiDPI assets are served to any display better than 1x. For more, read <a href="http://wp.me/pHPkU-16J">Making Sense of HiDPI Media Queries</a> on my blog. Or, <a href="test.html">view the test.</a></p>
+
+<footer>
+	<h6>&mdash; <cite>Matt Miklic</cite></h6>
+</footer>
+
+<p>Skip to <a href="#ios">iOS</a> &middot; <a href="#android">Android</a> &middot; <a href="#osx">OS X</a> &middot; <a href="#win">Windows</a></p>
+
+<section>
+	<h2 id="syntax">Suggested Syntax</h2>	
+	
+	<p>For each browser with HiDPI support, the most common method that it supports is highlighted in blue. For our media query, we combine the two rules that cover every browser, and add <code>print</code> so that high resolution assets are served when printing pages from your site.</p>
+	
+&nbsp;&nbsp;&nbsp;<pre><code>@media <span class="query">print</span>,
+&nbsp;&nbsp;&nbsp;<span class="query">(-webkit-min-device-pixel-ratio: 1.25)</span>,
+&nbsp;&nbsp;&nbsp;<span class="query">(min-resolution: 1.25dppx)</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="placeholder">/* Styles go here */</span>
+&nbsp;&nbsp;&nbsp;}</code></pre>
+</section>
+
+<section>
+	<h2 id="ios">iOS <small><a href="#top">Back to Top</a></small></h2>
+	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>Safari 9<br /><small>iOS 9</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner">&#10003;<sup>1</sup></td>
+		</tr>
+		</tbody>
+	</table>
+	<p class="note"><sup>1</sup> All iOS browsers use the system WebKit engine, so support will be identical to Safari.</small><br />
+</section>
+
+<section>
+	<h2 id="android">Android <small><a href="#top">Back to Top</a></small></h2>
+	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>Chrome 44<br /><small>Android 5.1</small></th>
+			<td>&#10003;</td>
+			<td class="winner">&#10003;</td>
+			<td>&#10003;</td>
+		</tr>
+		<tr>
+			<th>Firefox 39<br /><small>Android 5.1</small></th>
+			<td>&#10003;</td>
+			<td class="winner">&#10003;</td>
+			<td>&nbsp;</td>
+		</tr>
+		</tbody>
+	</table>
+</section>
+
+<section>
+	<h2 id="osx">OS X <small><a href="#top">Back to Top</a></small></h2>	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx</th>
+			<th>webkit-min-device-pixel-ratio: 1.25</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr id="chromemac">
+			<th>Chrome 44<br /><small>OS X 10.11</small></th>
+			<td>&#10003;</td>
+			<td class="winner">&#10003;</td>
+			<td>&#10003;</td>
+		</tr>
+		<tr id="firefoxmac">
+			<th>Firefox 39<br /><small>OS X 10.11</small></th>
+			<td>&#10003;</td>
+			<td class="winner">&#10003;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="safarimac">
+			<th>Safari 9<br /><small>OS X 10.11</small></th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td class="winner">&#10003;</td>
+		</tr>
+		</tbody>
+	</table>
+</section>
+
+<section>
+	<h2 id="win">Windows <small><a href="#top">Back to Top</a></small></h2>	
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+		<!-- Results table headers -->
+		<tr>
+			<th>&nbsp;</th>
+			<th>min-resolution: 120dpi</th>
+			<th>min-resolution: 1.25dppx	</th>
+			<th>webkit-min-device-pixel-ratio: 1.25	</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>Chrome 44<br /><small>Windows 10</small></th>
+			<td>&#10003;</td>
+			<td class="winner">&#10003;</td>
+			<td>&#10003;</td>
+		</tr>
+		<tr>
+			<th>Firefox 39<br /><small>Windows 10</small></th>
+			<td>&#10003;</td>
+			<td class="winner">&#10003;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Microsoft Edge<br /><small>Windows 10</small></th>
+			<td>&#10003;</td>
+			<td class="winner">&#10003;</td>
+			<td>&#10003;</td>
+		</tr>
+		</tbody>
+	</table>
+</section>
+
+</body>
+</html>
